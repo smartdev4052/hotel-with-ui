@@ -26,6 +26,3 @@ first find which rooms are booked in given date (15-2-2017, 20-2-2017)
 then exclude these rooms from remaining rooms ("Deluxe Rooms")
 
     Rooms.where("room_type = ? AND id NOT IN (?)", Room.room_types["Deluxe Rooms"], Booking.where("start_date < ? AND last_date > ? ", 20-2-2017 , 15-2-2017 ).collect(&:id))
-
-
-#### I think you will like this repository  [Housie](https://github.com/psbora2/housie)
